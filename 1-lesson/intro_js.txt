@@ -1,0 +1,103 @@
+JS INTRO
+
+■Java Scriptni 3 xil yo'l bilan ishlatsak bo'ladi. 
+1. HTML - brouserning consolida
+2. Online compiler
+3. VS code terminal
+
+---------------------
+
+■JS o'zgaruvchilar
+
+1. var => EcmaScript 5 eski js 
+(↑xatolarni yashirib ketadi. Bir marta qiymat bersak, keyin o'zgartirib bo'lmaydi)
+2. let => EcmaScript 6 yangi js 
+(↑xatolarni error bilan ko'rsatib beradi, bir marta qilymat bersak keyin ham o'zgartirib bo'ladi)
+3. const => EcmaScript 6 yangi js 
+(↑bir marta qiymat bersak, keyin o'zgartirib bo'lmaydi)
+
+---------------------
+
+■O'zgaruvchilarni (variable) e'lon qilish:
+1. ↓
+let a = 1;
+let b = 2;
+let c = 3;
+
+2. ↓
+let a = 1, b = 2, c = 3;
+
+---------------------
+
+JS data type
+
+console.log(type of qiymat) => biz type of bilan ma'lumot turini bilishimiz munkin
+
+Primitive (oddiy) :
+
+■1. String => matn ko'rinishidagi ma'lumotni saqlaydi
+3 xil string turi bor: "" , '' , ``
+`` => qo'shtirnoqni ichida matematika amallarini ham bajarsak bo'ladi. let a = `${2 * 2} hello`;
+let title = "webbrain academy";
+
+■2. Number => son ko'rinishidagi ma'lumotni saqlaydi
+9007199254740992 gacha bo'lgan sonlarni oladi
+
+■3. BigInt => eng katta son ko'rinishidagi ma'lumotni saqlaydi
+9007199254740992 dan katta sonlarni oladi. let a = 9007199254740992n (yoniga 'n' qoYishimiz kerak)
+
+■4. Null => o'zgaruvchining qiymati NULL
+let a = null; (type of => object). Qandaydir maqsadga ko'ra qiymat beramsak bu NULL
+
+■5. Undefined (e'lon qilinmagan) => o'zgaruvchi bor, lekin qiymati yo'q 
+let = a; O'zgaruvchi ochib qiymat bermasak bu Undufined. Type of => Undufined.
+
+■6. Boolean => true va false qiymatlari
+Ko'pincha shartli amalarni bajarishda qo'llaniladi
+ 
+■7. Symbol => Qiymati takrorlanmaydigan ID yasash uchun ishlatiladi
+let a = Symbol('test');
+
+
+
+Non primitive (oddiy bo'lmagan) :
+
+〇 Object
+
+■1. Object => key: value (kalit so'z va qiymatdan tashkil topgan)
+let user = {
+	name: "Umid", 
+	age: 23, 
+	status: "student", 
+	major: "IT"
+};
+
+■2. Array => (data typei bir xil bo'lgan qiymatlarga ega bo'ladi)
+let students = [
+	"Umid",
+	"Sohin",
+	"Olim",
+	"Jamshid"
+]
+Array o'z ichiga object ni ham olishi munkin
+let a = [
+  {
+    name: "Umid",
+    age: 23,
+    status: "student"
+  },
+  {
+    university: "JDU",
+    location: "Sebzor",
+  }
+]
+
+■3. Function => amalarni bajarishda ishlatamiz
+function sayHi() {
+  let a = 1 + 2;
+  console.logz("Salom" a);
+}
+
+
+◆Primitive bilan Non primitive ni farqi, primitive da o'zgaruvchining qiymatini Stack ga choylaydi
+Non primitive da o'zgaruvchini Stack ga joylaydi, lekin qiymatini Heap ga joylaydi. Stack bilan Heapni link(REFERENCE) bilan ulab qo'yadi. 
