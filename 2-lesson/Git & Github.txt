@@ -1,0 +1,45 @@
+Git ni versiyasini tekshirish↓
+git --version
+
+Githun da repositorie yaratish
+github repositorie create
+
+Git ni project iminga o'rnatish
+git init
+
+Github da kimni nomi va email dan borishini belgilash
+git config --global user.name ""
+git config --global email.name ""
+
+Git bilan github dagi HTTPS linkini ulash 
+git add origin URL
+
+Git dagi file ni ko'rsatadi
+git remote
+
+Git bilan yaratgan file mizni o'chiramiz
+git remote remova
+
+Project imini git orqali holatini tekshirish
+git status
+
+Git bilan project imizdagi yangiliklarni ro'yxatga olish
+git add . / git add fileName
+
+Git bilan izoh berish
+git commit -m ""
+
+Git bilan yangiliklarni github ga yuborish 
+git push origin master
+
+Git bilan qat'iy github da yuborish buyrug'ini berish 
+git push --force origin master
+
+Git bilan yangi branch yaratish
+git branch branchName
+
+Git bilan yaratgan branch imizga o'tish
+git checkout branchName
+
+Git bilan yangi branch yaratib, birdaniga o'tish
+git branch -m branchName

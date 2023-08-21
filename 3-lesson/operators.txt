@@ -1,0 +1,107 @@
+Operators
+
+■+ qo'shish
+let a = 1, b = 2; 
+console.log(a + b); natija 3
+
+■- ayrish
+let a = 2, b = 1; 
+console.log(a - b); natija 1
+
+■* ko'paytirish
+let a = 1, b = 2; 
+console.log(a * b); natija 2
+
+■/ bo'lish
+let a = 2, b = 1; 
+console.log(a / b); natija 
+
+■% qoldiqli bo'lish
+let a = 5, b = 2; 
+console.log(a % b); natija 1
+
+■** darajasi
+console.log(2 ** 5); natija 32
+
+■++ (increment) qiymatga 1 qo'shadi
+postfix (qiymatdan keyin ++ yozilsa)
+let a = 2;
+a++;
+console.log(a); natija 3
+
+prefix (qiymatdan oldin ++ yozilsa)
+let a = 2;
+++a;
+console.log(a); natija 3
+
+console.log(++2); natija error. Sababi qiymat har doim o'zgaruvchiga olinish kerak.
+
+■-- (decrement) qiymatga 1 ayradi
+postfix (qiymatdan keyin -- yozilsa)
+let a = 5;
+a--;
+console.log(a); natija 4
+
+prefix (qiymatdan oldin -- yozilsa)
+let a = 5;
+--a;
+console.log(a); natija 4
+
+console.log(--2); natija error. Sababi qiymat har doim o'zgaruvchiga olinish kerak.
+
+■= qiymat biriktirish uchun
+let a = 2;
+
+■== taqqoslash (noqat'iy - data type'ni taqqoslamaydi)
+console.log(2 == 2); natija true chiqadi. Sababi 2 2ga teng.
+console.log(2 == "2"); natija true chiqadi. Sababi 2 2ga teng. Data type'ni taqqoslamayapti.
+
+console.log(null == undefined); natija true
+console.log(0 == false); natija true
+
+array - console.log([1] == [1]); natija false. Sababi link = reference(linklari boshqa)
+object - console.log({1} == {1}); natija false. Sababi link = reference(linklari boshqa)
+
+■=== taqqoslaydi. (qat'iy - data type'larni ham taqqoslaydi)
+console.log(2 == "2"); natija false chiqadi. Sababi 2 = number, 2 = string.
+console.log("2" == "2"); natija true chiqadi. Sababi 2 = string, 2 = string.
+
+console.log(null === undefined); natija false
+console.log(0 === false); natija false
+
+array - console.log([1] === [1]); natija false. Sababi link = reference(linklari boshqa)
+object - console.log({1} === {1}); natija false. Sababi link = reference(linklari boshqa)
+
+■abriviations (qisqartirish): += -= *= /= 
+let a = 2;
+a = a + 5;
+console.log(a); natija 7
+
+
+let a = 2;
+a += 5; (qisqartmasi)
+console.log(a); natija 7
+
+
+
+
+
+// Operators: + - * / % ** ++ -- = == === =+ =- =* =/
+
+// let a = 22;
+// console.log(++a); // increment
+
+// let a = 22;
+// console.log(--a); // decrement
+
+// let a = 12;
+
+// console.log(3 === 3); 
+
+// let a = 5;
+// a = a + 2;
+// console.log(a);
+
+// let b = 5;
+// b -= 2;
+// console.log(b);

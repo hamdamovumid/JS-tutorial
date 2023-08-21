@@ -1,0 +1,71 @@
+Comparisions - Taqqoslash
+
+
+■<, >, <=, >=
+
+console.log(2 > 2); false
+console.log(2 < 2); false
+console.log(2 >= 2); true
+console.log(2 <= 2); false
+
+
+Mantiqiy operatorlar
+■ ! = inkor
+console.log(!true); natija false
+
+
+■ || = yoki(or) mantiqiy qo'shish
+Or || operator birinchi true qiymatni oladi 
+Qiymatlar orasidan bittasi true bo'lsa ham umumiy natija true bo'ladi.
+Qolgan holatlarda false bo'ladi
+
+console.log(true || false); natija true
+console.log(false || true); natija true
+console.log(true || true); natija true
+console.log(false || false); natija false
+
+console.log("webbrain" || true || null || 4); natija webbrain. Sababi webbrain'ni Boolean'ga solsa true qaytaradi
+
+
+■ && = va(and) mantiqiy ko'paytirish
+And && operator birinchi false qiymatni oladi 
+Qiymatlar orasidan bittasi false bo'lsa ham umumiy natija false bo'ladi.
+Qolgan holatlarda true bo'ladi
+
+console.log(true || false); natija false
+console.log(false || true); natija false
+console.log(false || false); natija false
+console.log(true || true); natija true
+
+console.log("webbrain" || true || null || 4); natija null. Sababi null'ni Boolean'ga solsa false qaytaradi
+
+
+■ || && Mixed
+
+console.log(4 || "wba" && null || undefined); natija 4. yani true
+
+console.log(4 || "wba" && null || undefined); birinchi ko'paytirish amali bajarilsa, "wba && null" bajariladi. Natija Null(false). Keyin Null(false)ni 4(true)ga taqqoslaydi. 4(true) || null(false) = 4(true).
+
+
+console.log((4 || "wba") && null || undefined); natija undefined
+birinchi qavsni ichi bajarilayapti. True chiqadi
+
+
+
+// Taqqoslash > < >= <= ! || &&
+
+// console.log(1 < 2);
+
+// console.log(!false);
+
+// || Or (yoki)
+
+// console.log(true || false || false);
+// console.log(null || "" || "wba" || "test");
+
+// && And (va) 
+
+// console.log(true && false);
+// console.log(3 && "wba" && 3 && undefined);
+
+// console.log(null && undefined || 3);

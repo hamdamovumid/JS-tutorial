@@ -1,0 +1,156 @@
+Type convertions (Data type'larni o'zgartirish)
+
+* NaN(Not a Number) - bu string'ni ichida ham raqam, ham text yozsak bizga NaN qaytaradi. 
+* String + Number = String (har doim)
+* String - Number = Number (har doim)
+* String * Number = Number (har doim)
+* String / Number = Number (har doim)
+
+■Stringni Numberga o'zgartirishni 4 xil usuli bor. +, Number(), parseInt(), parseFloat()
+
+1. +
+
+   let a = "12"; (a'ni qiymatiga ham raqam, ham text yozsak, NaN qaytaradi)
+   console.log(+a); string'ni yonidan + qo'ysak, number type'ga o'zgaradi.
+
+
+2. Number()
+
+   let a = "12"; (a'ni qiymatiga ham raqam, ham text yozsak, NaN qaytaradi)
+   console.log(Number(a)); a o'zgaruvchini Numberga o'zgartirayapti.
+
+   let a = Number(a); bu holatda ham yozsak bo'ladi.
+
+
+3. parseInt - sonlarni butun qiymatini olishda ishlatiladi.
+   parseInt'ni yana bir yaxshi tomoni borki, NaN chiqarmaydi.
+
+   let a = "1.2";
+   console.log(parseInt(a)); bizga 1 qiymatini qaytaradi. Yani butun soni oladi.
+
+   let a = "11s1";
+   console.log(a); natija 11 bo'ladi. Raqam tugaguncha bo'lgan butun raqamni oladi. NaN qaytarmaydi. 
+
+4. parseFloat - sonlarni haqiqiy qiymatini chiqarish uchun ishlatiladi
+
+   let a = "1.3333";
+   console.log(a); natija 1.3333 chiqadi. Yani haqiqiy son. 
+
+   let a = "1.3333s1";
+   console.log(a); natija 1.3333 bo'ladi. Raqam tugaguncha bo'lgan haqiqiy raqamni oladi. NaN qaytarmaydi. 
+
+
+■Numberni String'ga o'zgartirish
+
+1. String()
+
+   let a = 12;
+   console.log(String(a)); natija 12 data type'i string'da chiqadi.
+
+2. `` (back tic)
+
+  let a = 12;
+  console.log(`${a}`); natija 12 type'i string'da chiqadi.
+
+  let a = 12;
+  console.log("a"); natija a chiqadi. Sababi yuqoridagi o'zgaruvchiga aloqasi yo'q. 
+
+
+■String'ni => Boolean'ga o'zgartirish
+
+  * "", '', ``, 0, null, undefined, NaN => falsy qiymatlar
+  * Yuqoridagi qiymatlardan tashqari barcha qiymatlarda true bo'ladi. 
+
+  let a = "wba";
+  console.log(Boolean(a)); natija true qaytaradi. 
+  * Ikkita qo'shtirnoqni "" ichida hech narsa bo'lmasa, space ham bo'lmasa false qaytaradi. Qalgan barcha holatda true bo'ladi. 
+
+■Number'ni => Boolean'ga o'zgartirish
+
+  let a = 12;
+  console.log(Boolean(a)); natija true bo'ladi.
+  * O'zgaruvchini qiymati 0 bo'lgandagina false bo'ladi. Qolgan barcha raqamlar true bo'ladi.
+
+■Null, Undefined'ni => Boolean'ga o'zgartirish
+
+  * Null va Undefined'ni Boolean'ga o'zgartirsak har doim false qaytaradi.
+
+■Object, Array'ni => Boolean'ga o'zgartirish
+
+  * Object va Array'ni Boolean'ga o'zgartirsak, har doim true qaytaradi. 
+
+■Boolean'ni => String'ga o'zgartirish
+
+   let a = true;
+  console.log(String(a)); natija string'da true chiqadi.
+
+■Boolean'ni => Number'ga o'zgartirish
+
+  let a = true;
+  console.log(Number(a)); natija 1 qaytaradi. Sababi 1 true ma'noni beradi. 
+
+  let a = false;
+  console.log(Number(a)); natija 0 qaytaradi. Sababi 0 false ma'noni beradi.
+
+
+
+
+// String => Number
+// 1
+// let a = "22";
+// console.log(+a);
+
+// 2
+// let a = "2a2";
+// console.log(Number(a));
+
+// 3
+// let a = "22.2";
+// console.log(parseInt(a));
+
+// 4 
+// let a = "22.2";
+// console.log(parseFloat(a));
+
+// Number => String
+// 1
+// let a = 12;
+// console.log(String(a));
+
+// 2
+// let a = 22;
+// console.log(`${a * 2}`);
+
+// String => Boolean
+// "", '', ``, null, undefined = false
+
+// let a = "";
+// console.log(Boolean(a));
+
+// Number => Boolean
+// 0 = false, ... = true
+// let a = 0;
+// console.log(Boolean(a));
+
+// Null, Undefined => Boolean
+// Null, Undefined = false
+
+// let a = undefined;
+// console.log(Boolean(a));
+
+// Object, array => Boolean
+// Object, array = true 
+
+// let a = {};
+// console.log(Boolean(a));
+
+// Boolean => String 
+// let a = false;
+// console.log(String(a));
+
+// Boolean => Number
+// 1 = true , 0 = false
+
+// let a = false;
+// console.log(Number(a));
+
