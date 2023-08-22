@@ -1,0 +1,7 @@
+?? => shartli amalarda ishlatiladi. Null, Undefiden kelishini kutib, Null yoki Undefined'dan keyingi qiymatni qaytaradi.
+
+console.log(null ?? "wba"); natija "wba" bo'ladi. Sababi Null'dan keyingi qiymat "wba"
+
+Agar qiymatlar orasida Null ham Undefined ham qatnashmagan bo'lsa, birinchi qiymatni oladi. 
+
+console.log(12 ?? "wba"); natija 12 bo'ladi. Sababi null ham undefined ham qatnashmagan.

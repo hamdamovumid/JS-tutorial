@@ -1,0 +1,46 @@
+If & Else - Shart operatori
+
+* If bir o'zi ishlatilishi munkin. Lekin Else bir o'zi ishlatilmaydi.
+
+const age = 14;
+
+if (age >= 18) {
+  console.log("Saylash munkin");
+} else {
+  console.log("Saylash munkin emas");
+}
+
+Natija "Saylash munkin emas" chiqadi. Sababi bizni age o'zgaruvchimizni qiymati 14. Yani 18dan kichik.
+
+
+-------------------
+Combination
+
+const age = 20;
+
+if (age >= 16 && age >= 19) {
+  console.log("Pasport va prava olish munkin");
+} else if (age >= 16 && age < 19) {
+  console.log("Pasport olish munkin. Lekin prava olish munkin emas")
+} else {
+  console.log("Pasport va prava olish munkin emas");
+}
+
+Natija "Pasport va prava olish munkin" chiqadi. Sababi age o'zgaruvchi 16dan ham katta 19dan ham katta.
+
+
+
+
+// // If-else => shartli operator
+
+// let time = 18;
+
+// if (time > 6 && time <= 10) {
+//     console.log("Xayrli tong!");
+// } else if (time > 10 && time <= 17) {
+//     console.log("Xayrli kun!");
+// } else if (time > 17 && time <= 20) {
+//     console.log("Xayrli kech!");
+// } else {
+//     console.log("Vaqt noto'g'ri!");
+// }

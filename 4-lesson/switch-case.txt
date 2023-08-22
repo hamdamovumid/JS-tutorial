@@ -1,0 +1,21 @@
+Switch Case - Shartli operatorlar
+
+* Foydalanuvchi kiritayotgan ma'lumot bizga aniq bo'lsa, shunda switch-case ishlatamiz.	
+
+let day = "Monday";
+switch(day) {
+  case "Monday" : console.log("Mon"); breake;
+  case "Tuesday" : console.log("Tue"); breake;
+  case "Wenesday" : console.log("Wed"); breake;
+  case "Thursday" : console.log("Thu"); breake;
+  case "Friday" : console.log("Fri"); breake;
+  case "Saturday" : console.log("Sat"); breake;
+  case "Sunday" : console.log("Sun"); breake;
+  default: console.log("Noto'g'ri ma'lumot kiritildi"); breake;
+}
+
+* Bizni yuqoridagi logikamiz hafta kunlarini qisqartirib beradi. User hohlagan hafta kunlaridan birini kiritsa, shunga mos qisqartmasi chiqadi. Yani user kiritadigan ma'lumot bizga aniq bo'lganidan keyin biz switch-case'dan foydalanayapmiz.
+
+* breake - o'zgaruvchidagi qiymat qaysi case'da ishlasa, shunda to'xtaydi. Boshaqasiga o'tmaydi.
+
+Natija "Mun" chiqadi. Sababi day o'zgaruvchini ichida "Monday" kiritilgan. 

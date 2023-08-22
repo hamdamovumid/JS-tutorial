@@ -1,0 +1,10 @@
+Ternary operator 
+
+*Ternary operator if-else'ga o'xshab ketadi. Faqat syntax boshqacha bo'ladi. 
+
+let age = 18 ? console.log("Saylash munkin") : console.log("Saylash munkin emas");
+
+* ? = if
+  : = else 
+
+* Faqat ternary operatorda if yozildimi, else ham yozilishi kerak. Bo'lmasa ishlamaydi.
