@@ -1,0 +1,63 @@
+Loop 
+
+* Bir xil hodisalarni qayta-qayta kod yozmasligimiz uchun kerak. Kod satrlarini bir martadan takrorlashning bir usuli. Loop ichidagi kod bloki loop tomonidan talab qilinadigan holatlar bajarilmaguncha qayta-qayta bajariladi.
+
+* Loop 3ga bo'linadi. 
+1. While
+2. Do-while
+3. For
+
+
+While
+
+* While da birinchi shartni tekshirib keyin bajaradi
+
+let i = 1;
+while(i <= 100) {
+  if(i % 2 == 0) console.log(i);
+  i++;
+}
+
+Natija bizda 1dan 100gacha bo'lgan toq sonlarni chiqaradi. 
+I o'zgaruvchini ichida 1 qiymat berilgan. While ni ichiga holat yozayapmiz. i <= 100
+If bilan shart berayapmiz. i bo'linsa 2 ga va qoldig'i 0 ga teng bo'lsa console ga chiqar deyapmiz. 
+Oxirida shu qiymatni 1 ga oshirib qo'yapmiz.
+
+
+Do-while
+
+* Do-while da birinchi bajarib kehyin tekshiradi
+
+let  i = 1;
+do {
+  console.log(i);
+  i++
+}while(i <= 100);
+
+Natija 1dan 100gacha bo'lgan sonlarini chiqaradi. 
+console.log da birinchi bajarib, keyin while bilan tekshirayapti.
+
+
+For 
+
+* for - while va do-while dan ham syntax jihatan farqli hisoblanadi. 
+* for uchun 3ta parametr berish majburiy: for (parametr1; parametr2; parametr3;)
+
+for(let a = 1; a <= 100; a++){
+  if(a % 2 === 0){
+  console.log(a);
+}
+}
+
+Natija 1dan 100gacha juft sonlarni chiqarib beradi. 
+* for da continue keyword'i bor. Bu bitta o'tkazib yuborish vazifasini bajaradi.
+* Continue bilan Break'ni farqi - continue'da bitta o'tkazib yuboradi. Break'da esa shu qiymatgacha ishlaydi. Ya'ni loop to'xtaydi.
+
+
+
+
+
+
+
+
+
