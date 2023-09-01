@@ -1,0 +1,81 @@
+Object
+
+* Key va value'dan tashlik topgan ma'lumot turi. Bitta o'zgaruvchiga bir necha qiymat biriktirsak bo'ladi. 
+
+Literal
+
+let user1 = {
+  login: "user1",
+  password: 123,
+  age: 23
+}
+
+
+Constructor
+
+let user2 = new Object({
+  login: "user2",
+  password: 321,
+  age: 32
+})
+
+
+Accessing (Object ichidagi key qiymatiga murojat qilish)
+
+* Accessing bu - Object ichidagi keyni qiymatini olish uchun ishlatiladi. 
+* Static way "Nuqta" bilan murojat qilishga ishlatiladi
+console.log(user1.login);
+
+
+Dynamic
+
+* Bu usul bilan ham object ichidagi key qiymatini olsak bo'ladi
+console.log(user1["login"]);
+
+
+O'zgaruvchili key
+
+let age = 22;
+
+let user3 = new Object({
+  login: "user2",
+  password: 321,
+  [age]: 32
+})
+
+* User3'ning age key'i o'zgaruvchi hisoblanadi. Natija 22 chiqadi. 
+
+
+
+
+let title = "name";
+
+let user3 = {
+    name: "Umar",
+    title: "Student",
+}
+
+console.log(user3[title]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

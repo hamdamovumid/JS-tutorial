@@ -1,0 +1,96 @@
+Function 
+
+function greet(firstName){
+  console.log(`Saytimizga hush kelibsiz ${firstName}`)
+} 
+
+greet("Dou");
+greet("Jordan");
+greet("Lisa");
+
+Natija ↓
+Saytimizga hush kelibsiz Dou
+Saytimizga hush kelibsiz Jordan
+Saytimizga hush kelibsiz Lisa
+
+chiqadi. Bitta function'da bitta logika yozib, unga istagancha qiymat berishimiz munkin.
+
+function getEven(n) {
+  for (let a = 0; i <= n; i++){
+  console.log(i)
+}
+}
+
+getEven(15);
+getEven(10);
+
+Natija birinchi holatda 0dan 15gacha juft sonlar chiqadi.
+Ikkinchi holatda 0dan 10gacha juft sonlar chiqadi.
+
+
+Return 
+
+Return ga berilgan qiymat, function'ni qiymatiga teng bo'ladi. 
+Return dan keyin yozilgan kod o'qilmaydi. Tashlab ketiladi.
+
+
+Default parametr
+
+* Bizga default qiymati chiqarishni oldini oladi
+const greet = (firstName = "Mehmon") => {
+  return `${firstName, xush kelibsiz!};`
+}
+console.log(greet()); * greet'ni ichiga hech narsa yozmasdan ketdik. Bu undefined. Shu undefined'ni oldini olish uchun yuqoridagi firstName'ga qiymat bersak, shu qiymatni console'da ko'ramiz.
+
+
+Hoisting
+
+
+* E'lon qilinmagan o'zgaruvchini console.log'da chiqarishimizga qarab o'zgaruvchiular hoisting'ga uchraydi. 
+
+console.log(a);
+var a = 10; * natija undefined. Error emas. Yani hoistingga uchrayapti.
+
+
+console.log(a);
+let a = 10; * natija error. Lekin errorni ma'nosida a borligini aytib ketadi. Lekin console'ga var'ga o'xshab undefined chiqarmaydi. Yani JS biladi. Biz console'dan keyin a e'lon qilganimizni, lekin chiqarishga ruxsat bermaydi va hoisting'ga uchraydi.
+
+
+console.log(a);
+const a = 10; * natija huddi let kabi ishlaydi. 
+
+
+
+Function decration hoisting'ga uchraydi.
+greet("Usmon")
+function greet(firstName){
+  console.log(`${fistName} xush kelibsiz!`);
+}
+* Natija: Usmon xush kelibsiz!
+
+
+
+function exsspretion hoisting'ga uchramaydi.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
