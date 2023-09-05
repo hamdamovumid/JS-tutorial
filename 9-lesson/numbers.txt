@@ -1,0 +1,167 @@
+Numbers
+
+MAX_SAVE_INTEGER = Bizga Number type'dagi eng katta soni chiqarib beradi.
+console.log(Number.MAX_SAVE_INTEGER);
+
+
+MIN_SAVE_INTEGER = Bizga Number type'dagi eng kichik soni chiqarib beradi.
+console.log(Number.MIN_SAVE_INTEGER);
+
+
+Format
+let million = 1_000_000;
+* Ko'rish oson bo'lish uchun _ foydalansak bo'ladi. JS console'da _ hisobga olmasdan chiqarib beradi.
+
+
+let million = "1_000_000";
+* Faqat yuqorida bu number emas bo'ladi. Number type ham o'tkaza olmaymiz. NaN chiqadi. 
+
+
+Sonni darajasi
+let million = 1000000;
+let million2 = 1e6; // "e" ning orqasidan kelgan son nechi bo'lsa, shuncha nol qo'shib beradi. 
+
+
+parseInt
+* value'ni Numberga o'tkazib beradi va sonni butun qismini qaytaradi.
+
+parseFloat
+* value'ni Numberga o'tkazib beradi va sonni haqiqiy qismini qaytaradi.
+
+
+Issue => muammo
+
+console.log(0.1 + 0.2); // Natija: 0.300000000000000000003 ya'ni xato ma'lumot.
+
+
+toFixed
+* Sonni yaxlitlaydi. Nuqtadan keyingi soni oladi. Lekin numberdan stringga o'tadi. Qavsni ichida berilgan parametr nuqtagacha bormay qolsa, 0 qo'shib betadi.
+let num = 123.123721;
+num = num.toFixed(3); // Natija: 123.124
+
+
+toPrecision
+* sonni yaxlitlaydi. Sonni boshidan oladi. Lekin numberdan stringga o'tadi. 
+let num = 123.123721;
+num = num.toPrecision(3); // Natija: 123
+
+
+2lik sanoq sistemasidan 10lik sanoq sistemasiga o'tkazish
+let num = 1100;
+num = parseInt(num, 2); 
+console.log(num); // Natija 12
+
+
+10lik sanoq sistemasidan 2lik sanoq sistemasiga o'tkazish. 36lik sanoq sistemasigacha ishlaydi. 
+let num = 12;
+num num.toString(2);
+console.log(num); // Natija 1100
+
+
+isNaN
+* NaN yoki yo'qligia tekshiradi. 
+
+console.log(IsNaN(12)); // Natija false. Chunki 12 bu number
+
+// console.log(NaN === NaN);
+// console.log(isNaN(NaN));
+// console.log(isNaN(1)); // false
+// console.log(isNaN(true)); // false
+// console.log(isNaN(null)); // false
+// console.log(isNaN(undefined)); // true
+// console.log(isNaN("webbrain")); // true
+// console.log(isNaN({ name: "webbrain" })); // true
+// console.log(isNaN(["webbrain"])); // true
+
+
+
+Object.is(value1, value2); 
+* Taqqoslash keywordi. === bilan bir xil ishlaydi.
+console.log(Object.is(1, 1)); // Natija true.
+
+
+Math
+* JSdagi kutubxona. 
+
+Math.Pi
+console.log(Math.PI); // Natija: 3.141592653589793
+
+Math.E
+console.log(Math.E); // Natija: 2.718281828459045
+
+Math.abs
+* har qanday sonni musbat qilib beradi.
+console.log(Math.abs(-5)); // Natija: 5
+
+Math. sin, cos, tan, ctg
+console.log(Math.atan(30));
+
+Round 
+* Yaxlitlash
+console.log(Math.round(1.51)); // Natija 2
+console.log(Math.round(1.49)); // Natija 1
+console.log(Math.round(1.5)); // Natija 2
+
+
+Floor
+* Pastga yaxlitlaydi
+console.log(Math.floor(2.99)); // Natija 2
+
+
+Ceil
+* Yuqoriga yaxlitlaydi
+console.log(Math.ceil(2.01)); // Natija 3
+
+
+Trunct
+* parseInt bilan bir xil ishlaydi
+console.log(Math.trunct(2.99)); // Natija 2
+
+
+Pow
+* Daraja
+console.log(Math.pow(2, 5)); // Natija 32
+
+
+Min
+* Eng kichik qiymat
+console.log(Math.min(1, 2, 3, 4, 5)); // Natija 1
+
+
+Max
+* Eng katta qiymat oladi.
+console.log(Math.max(1, 2, 3, 4, 5)); // Natija 5
+
+
+sqrt
+* Ildiz chiqaradi
+console.log(Math.sqrt(16)); // Natija 4
+
+
+cbrt
+* Kubik ildiz chiqaradi
+console.log(Math.cbrt(27)); // Natija 3
+
+
+Sign
+* Manfiy son kelsa, -1 qaytaradi. Musbat son kelsa, 1 qaytaradi. 0 kelsa 0 qaytaradi. -0 kelsa, -0 qaytaradi.
+console.log(Math.sign(-24)); // Natija -1
+console.log(Math.sign(24)); // Natija 1
+console.log(Math.sign(0)); // Natija 0
+console.log(Math.sign(-0)); // Natija -0
+
+
+Random
+* ? ~ ? oralig'idagi sonlarni chiqarish uchun ishlatamiz
+console.log(Math.random()); // Bizda 0 va 1 oralig'idagi haqiqiy son chiqaradi. Faqat 1 kirmaydi
+console.log(Math.random() * 10); // Bizda 0 va 10 oralig'idagi haqiqiy son chiqaradi. Faqat 10 kirmaydi
+console.log(Math.trunc(Math.random())); // Bizda 0 va 1 oralig'idagi butun son chiqaradi. Chunki trunc yozdik. Faqat 1 kirmaydi
+
+console.log(Math.trunc(Math.random() * 26) + 25); // Natijada 25dan 50gacha haqiqiy sonlar chiqadi
+
+
+
+
+
+
+
