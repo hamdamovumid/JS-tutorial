@@ -130,7 +130,6 @@ let user2 = new Object({
 // console.log(object2);
 
 // In => Object'ni ichida bizga kerakli key bormi yo'qmi shuni tekshiradi. 
-// Natija bizda har doim true yoki false qaytaradi.
 
 // let student = {
 //     name: "Umid",

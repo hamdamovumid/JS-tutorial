@@ -23,6 +23,7 @@ let user2 = new Object({
 Accessing (Object ichidagi key qiymatiga murojat qilish)
 
 * Accessing bu - Object ichidagi keyni qiymatini olish uchun ishlatiladi. 
+
 * Static way "Nuqta" bilan murojat qilishga ishlatiladi
 console.log(user1.login);
 

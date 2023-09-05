@@ -1,0 +1,165 @@
+Object advanced!
+
+Garbage collection
+
+* Object yaratib unga key va qiymatlar bersak, lekin usha obyekni keyin primitive data typelarga tenglasak, yuqorida yaratilgan key va qiymatlar "Garbage collection" ga borib tushadi. 
+
+let object = {
+  login: "web",
+  pass: 123
+}
+// unreachable
+object = null;
+
+
+This
+
+* This - har doim o'zi turgan scope'ga mu'roajat qiladi. 
+* This - function declaration, exesspration'da ishlaydi. Function arrow'da ishlamaydi => boshqa qiymat qaytaradi.
+
+let object = {
+  name: "WEB",
+  getThis(){
+   console.log(this);
+   console.log(this.name);  // Natija WEB
+ }
+}
+
+object.getThis();
+
+
+// let object = {
+//     login: "WEB",
+//     pass: 123,
+//     getInfo(){
+//         console.log(`${this.login} paroli: ${this.pass}`);
+//     }
+// }
+// let object2 = {};
+// Object.assign(object2, object);
+// object = null;
+// console.log(object2);
+
+// object2.getInfo();
+
+
+Destructure => qayta qurish
+
+let name = "Umid";
+let user = {
+  name: "wba",
+  age: 12,
+  position: "beginner"
+  info: {
+   height: 178,
+   width: 80,
+ }
+}
+
+let {name: ism, age, position, info: {height, width}} = user; = let name = user.name; // bir xil
+console.log(ism, age, position, height, width);
+
+ 
+
+
+
+// Garbage collection
+
+// let person = {
+//     login: "abc",
+//     pass: 345,
+//     status: "student"
+// }
+
+// person = 11;
+
+// console.log(person.login);
+
+// This
+
+// let object = {
+//     name: "WBA",
+//     pass: 123,
+//     getInfo(){
+//         console.log(`${this.name} user paroli: ${this.pass}`);
+//     }
+// }
+
+// let object2 = {};
+
+// Object.assign(object2, object);
+// object = null;
+// object2.getInfo();
+
+// Destructure => qayta qurish
+
+// let name = "Umar";
+// let object = {
+//     name: "Umid",
+//     age: 22,
+//     interesting: "art",
+//     status: "Student",
+//     info: {
+//         heigth: 189,
+//         width: 25,
+//     }
+// }
+
+// let {name: ism, age, interesting, info: {heigth, width}} = object;
+// console.log(ism, age, interesting, heigth, width);
+
+// Spread operator ... => shallow copy
+
+// let object = {
+//     name: "Umid",
+//     age: 22,
+//     interesting: "art",
+//     status: "Student",
+//     info: {
+//         heigth: 189,
+//         width: 25,
+//     }
+// }
+
+// let object2 = {...object, age: 25}
+
+// console.log(object);
+
+// Optional chaning => (?)
+
+// let object = {
+//     name: "Umid",
+//     age: 22,
+//     interesting: "art",
+//     status: "Student",
+//     info: {
+//         heigth: 189,
+//         width: 25,
+//     }
+// }
+
+// console.log(object.firstName?.age.info);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
