@@ -1,5 +1,6 @@
 // Home work
-//Random generator
+
+// Random generator
 // const randomGenerator = (min, max) => {
 //     return Math.trunc(Math.random() * (max - min + 1)) + min;
 // }
@@ -64,3 +65,38 @@
 // let yaxlitlanganSon = yaxlitlash(son);
 
 // console.log(yaxlitlanganSon);
+
+// Codwars
+// Hali ishlamadi
+// const twoArePositive = (num1, num2, num3) => {
+//   if ((num1 && num2 > 0)) {
+//     console.log(true);
+//   } else if (num2 && num3 >= 0) {
+//     console.log(true);
+//   } else if (num1 && num3 >= 0) {
+//     console.log(true);
+//   } else if (num1 && num3 <= 0) {
+//     console.log(false);
+//   } else if(num1 || num2 || num3 > 0) {
+//     console.log(false);
+//   } else if(num1 && num2 && num3 < 0){
+//     console.log(false);
+//   }
+// };
+
+// twoArePositive(2, 4, -3) // true
+// twoArePositive(-4, 6, 8) // true
+// twoArePositive(4, -6, 9) // true
+// twoArePositive(-4, 6, 0) // false
+// twoArePositive(4, 6, 10) // false
+// twoArePositive(-14, -3, -4) // false
+
+// Task 2
+// const num = (a) => {
+//   if (a % 2 === 0 && a >= 0) {
+//     console.log(true);
+//   }else{
+//     console.log(false);
+//   }
+// };
+// num(1);
