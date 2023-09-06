@@ -67,29 +67,18 @@
 // console.log(yaxlitlanganSon);
 
 // Codwars
-// Hali ishlamadi
-// const twoArePositive = (num1, num2, num3) => {
-//   if ((num1 && num2 > 0)) {
-//     console.log(true);
-//   } else if (num2 && num3 >= 0) {
-//     console.log(true);
-//   } else if (num1 && num3 >= 0) {
-//     console.log(true);
-//   } else if (num1 && num3 <= 0) {
-//     console.log(false);
-//   } else if(num1 || num2 || num3 > 0) {
-//     console.log(false);
-//   } else if(num1 && num2 && num3 < 0){
-//     console.log(false);
-//   }
-// };
-
-// twoArePositive(2, 4, -3) // true
-// twoArePositive(-4, 6, 8) // true
-// twoArePositive(4, -6, 9) // true
-// twoArePositive(-4, 6, 0) // false
-// twoArePositive(4, 6, 10) // false
-// twoArePositive(-14, -3, -4) // false
+// function twoArePositive(a, b, c) {
+//   if (a > 0 && b > 0 && c < 0) return true;
+//   else if (a > 0 && b < 0 && c > 0) return true;
+//   else if (a < 0 && b > 0 && c > 0) return true;
+//   else false;
+// }
+// console.log(twoArePositive(2, 4, -3)); // true
+// console.log(twoArePositive(-4, 6, 8)); // true
+// console.log(twoArePositive(4, -6, 9)); // true
+// console.log(twoArePositive(-4, 6, 0)); // false
+// console.log(twoArePositive(4, 6, 10)); // false
+// console.log(twoArePositive(-14, -3, -4)); // false
 
 // Task 2
 // const num = (a) => {
