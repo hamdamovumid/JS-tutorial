@@ -1,0 +1,173 @@
+Array basic
+
+Array yaratish turlari
+1) let array1 = [1, 2];
+2) let array2 = new Array(3, 4);
+* array yaratishni ikkinchi usulida, bitta parametr bersak o'shancha bo'sh joy qilib beradi
+
+Array lentgh
+let array1 = [1, 2, 3];
+console.log(array1.lentgh); // natija: 3
+
+let array2 = new Array(2);
+console.log(array2.lentgh); // natija: 2. Chunki ikkita bo'sh joy bor
+
+let array2 = new Array("2");
+console.log(array3.lentgh); // natija: 1. Chunki bitta string bor
+
+
+Accesseing - muroajat qilish
+[]
+let array1 = [1, 2, 3, 4, 5];
+console.log(array1[1]); // natija: 2. Chunki array1dagi 10indexda 2 qiymat turibdi. 
+
+at()
+let array2 = [1, 2, 3, 4, 5];
+console.log(array1.at(1)); // natija: 2. Chunki array1dagi 10indexda 2 qiymat turibdi. 
+* at() - manfiy index ham oladi
+
+
+Array'ni qiymatini o'zgartirish
+let array = [1, 2, 3, 4]; // mutable // natija: 1, i, 3, 4. Bu o'zgardi.
+let string = ["1234"]; //immutable // natija: 1234. Bu o'zgarmadi
+array[1] = "i";
+string[1] = "i";
+console.log(array, string);
+
+
+
+Array adding - qo'shish
+let array = [1, 2];
+array[2] = uch;
+console.log(array); // natija: 1, 2, uch 
+
+let array = [];
+array[10] = "a";
+console.log(array); // natija: <10 empty items>, '10'. 10ta bosh jo'y va "10" chiqadi. 
+
+
+
+String'dan => Array'ga o'tish
+split(char)
+
+let string = "salom dunyo";
+let array = string.split();
+console.log(array); // natija: "[salom dunyo]"
+console.log(array.lentgh); // natija 1
+
+
+let string = "salom dunyo";
+let array = string.split(" ");
+console.log(array); // natija ["salom", "dunyo"]
+* spit() - qavsini orasiga "" ochib qayidan bo'lmoqchimiz, shuni symbol'ni yozsak, shu yerdan bo'lib beradi
+
+let string = "salomdunyo";
+let array = string.split("");
+console.log(array); // natija ["s", "a", "l", "o", "m", "d", "u", "n", "y", "o"]
+* split() - qavsini ichiga "" ochib hech narsa yozmasak harflarni ajratib beradi
+
+
+
+Array'dan => String'ga o'tish
+join(char)
+
+let array = [1, 2, 3];
+let string = array.join();
+console.log(string); // natija: "1,2,3"
+
+let array = [1, 2, 3];
+let string = array.join(/);
+console.log(string); // natija: "1/2/3"
+
+
+
+
+Array'ni array'ga qo'shish
+concat()
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5, 6];
+let newArr = [];
+newArr = newArr.concat(arr1, arr2);
+console.log(newArr); // natija: [1, 2, 3, 4, 5, 6]
+* concat() - array'ni array'ga qo'shib beradi
+
+
+
+Array'ni aniqlaydigan method
+isArray()
+console.log(Array.isArray("salom")); // natija: false
+console.log(Array.isArray([1, 2, 3])); // natija: true
+* isArray - ko'rsatilayotgan qiymat array yoki arraymaslikga aniqladi
+
+
+Array comparison
+console.log([] == 0); // natija true
+* Har doim bo'sh array 0 ga teng.
+
+
+
+Array - loops
+let arr = [2, 4, 6, 8, 10];
+for(let item of arr) {
+  console.log(item);
+}
+// natija 2, 4, 6, 8, 10
+* Array for of - arrayni ichidagi qiymatlarni aylanib chiqadi va shu qiymatlarni qaytaradi
+
+let arr = [2, 4, 6, 8, 10];
+for(let item in arr) {
+  console.log(item);
+}
+// natija 0, 1, 2, 3, 4
+* Array for in - arrayni ichidagi indexlarni aylanib chiqadi va shu indexlarni qaytaradi
+
+
+
+Array Methods
+push()
+
+let arr = [1, 3, 5, 7];
+arr.push(9);
+console.log(arr); // natija: [1, 3, 5, 7, 9]
+* push() - orqasidan qiymat qo'shadi
+
+
+
+unshift()
+let arr = [1, 3, 5, 7];
+arr.unshift(0);
+console.log(arr); // natija: [0, 1, 3, 5, 7, 9]
+* unshift() - oldidan qiymat qo'shadi
+
+
+pop()
+let arr = [1, 3, 5, 7];
+arr.pop();
+console.log(arr); // natija: [0, 1, 3, 5]
+* pop() - orqadan qiymat o'chradi
+
+
+
+shift()
+let arr = [1, 3, 5, 7];
+arr.shift();
+console.log(arr); // natija: [3, 5, 7]
+* shift() - oldidan qiymat o'chradi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

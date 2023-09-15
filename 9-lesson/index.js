@@ -4,13 +4,17 @@
 // const randomGenerator = (min, max) => {
 //     return Math.trunc(Math.random() * (max - min + 1)) + min;
 // }
-// console.log(randomGenerator(20, 30));
+// console.log(randomGenerator(50, 60));
 
 // sign, sqrt, cbrt, pow, abs, round, floor, ceil, trunc
 
 // Sqrt
-// const mySqrt = (number) => number ** (1 / 2);
-// console.log(mySqrt(25));
+// const sqrt = (number) => number ** (1 / 2);
+// console.log(sqrt(25));
+
+// Cbrt
+// const cbrt = (number) => number ** (1 / 3);
+// console.log(cbrt(25));
 
 // Sign
 // const sign = (number) => {
@@ -26,7 +30,7 @@
 // }
 // sign(0);
 
-// Abs
+// Trunc
 // const trunc = (number) => {
 //     console.log(parseInt(number));
 // }
@@ -60,27 +64,14 @@
 //     return butunQisminson;
 //   }
 // }
-
 // let son = 5.2;
 // let yaxlitlanganSon = yaxlitlash(son);
 
 // console.log(yaxlitlanganSon);
 
 // Codwars
-// function twoArePositive(a, b, c) {
-//   if (a > 0 && b > 0 && c < 0) return true;
-//   else if (a > 0 && b < 0 && c > 0) return true;
-//   else if (a < 0 && b > 0 && c > 0) return true;
-//   else false;
-// }
-// console.log(twoArePositive(2, 4, -3)); // true
-// console.log(twoArePositive(-4, 6, 8)); // true
-// console.log(twoArePositive(4, -6, 9)); // true
-// console.log(twoArePositive(-4, 6, 0)); // false
-// console.log(twoArePositive(4, 6, 10)); // false
-// console.log(twoArePositive(-14, -3, -4)); // false
 
-// Task 2
+// Task 1
 // const num = (a) => {
 //   if (a % 2 === 0 && a >= 0) {
 //     console.log(true);
@@ -88,4 +79,13 @@
 //     console.log(false);
 //   }
 // };
-// num(1);
+// num(2);
+
+// Task 2
+// function twoArePositive(a, b, c) {
+//   if (a > 0 && b > 0 && c < 0) return true;
+//   else if (a > 0 && b < 0 && c > 0) return true;
+//   else if (a < 0 && b > 0 && c > 0) return true;
+//   else false;
+// }
+// console.log(twoArePositive(-2, 4, 3));

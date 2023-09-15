@@ -1,0 +1,237 @@
+Strings
+* String e'lon qilishda 4ta usuldan foydalansak bo'ladi.
+
+let str1 = "";
+let str2 = '';
+let str3 = ``;
+let str4 = new String("Webbrain");
+
+
+ValueOf
+console.log(str4.valueOf());
+* str4 ni qiymatini sof holda olamiz
+
+
+Escape character
+" \ "
+let str = "\"webbrain"\"
+console.log(str);
+* Bizga ikkitalik qo'shtirnoqni ichida yana ikkitalik qo'shtirnoq ishlatishga yordam beradi.
+
+" \n "
+let str = "Salom \n Dunyo";
+console.log(str);
+* Bitta string ichida yozilgan qiymat uchun bitta pastdan qator ochib beradi. Yani ikki qatorga biz yozgan textni joylashtiradi. 
+
+" \t "
+let str = "Salom \t dunyo";
+console.log(str);
+* Tab vazifani bajaradi.
+
+
+Accessing string
+length
+
+let str = "Webbrain Academy";
+console.log(str.length);
+* length - qo'shtirnoqni ichida nechta symbol qatnashga bo'lsa, shuncha son qaytaradi. Yani sanab beradi
+
+
+[] - index
+let str = "Webbrain Academy";
+console.log(str[0]); // natija: W
+* [] - stringni ichida bizga kerakli bo'lgan symbolni indexini yozadigan bo'lsak, shu symbol chiqadi. Yo'q indexni bersak undefined chiqadi
+
+
+
+at()
+let str = "Webbrain Academy";
+console.log(str.at(0)); // natija: W
+console.log(str.at(-5)); // natija: a
+* at() ni [] dan farqi manfiy son ham qabul qiladi. Uni orqadan sanab chiqaradi.
+
+
+
+charAt()
+let str = "Webbrain Academy";
+console.log(str.charAt(0)); // natija: W
+console.log(str.chatAt(-5)); // natija: hech narsa chiqmaydi. ""
+
+
+
+toUpperCase()
+let fullName = "webbrain academy";
+let newValue = fullName.toUpperCase();
+console.log(newValue); // natija: WEBBRAIN ACADEMY
+* toUpperCase() - stringni katta harfga o'zgartirib beradi
+
+
+toLowerCase() 
+let fullName = "WEBBRAIN ACADEMY";
+let newValue = fullName.toLowerCase();
+console.log(newValue); // natija: webbrain academy
+* toLowerCase() - stringni kichik harfga o'zgartirib beradi
+
+
+
+toLocalUpperCase()
+* Bazi turk alifbolariga o'xshab ketadigan katta va kichik harflari bir biriga o'xshamaydigan tillar uchun chiqarilgan.
+
+
+Mutable vs Immutable variable
+let str = "Webbrain Academy";
+str[0] = "w";
+console.log(str); // natija Webbrain Academy . Yani o'zgarmaydi.
+* stringdagi qiymatlarni o'zgartira olmaymiz. Object, arrayda o'zgaradi
+
+
+indexOf()
+let str = "Webbrain Academy";
+console.log(str.indexOf("e")); // natija 2.
+console.log(str.indexOf("brain")); // natija 3.
+console.log(str.indexOf("a", 9)); // natija 11.
+console.log(str.indexOf("t")); // natija -1.
+* indexOf - bizga string ichidan izlayotgan symbolni indexini chiqaradi. Bir xil symbol bo'lsa, birinchini oladi. Shu bilan birga so'zlarni xam yozsak bo'ladi. so'zning birinchi harf indexini oladi. Ikkita parametr bersak ham bo'ladi. Birinchisi bizga kerak bo'lgan harf va qaysi indexdan boshlab qidirsin. Yo'q harfni qidirsak -1 chiqadi
+
+
+
+lastIndexOf()
+let str = "Webbrain Academy";
+console.log(str.lastIndexOf("a")); // natija 11.
+* Oxiridan boshlab qidiradi. Lekin indexni boshidan sanab chiqaradi 
+
+
+
+includes()
+let str = "Webbrain Academy";
+console.log(str.includes("W")); // natija true.
+* includes - har doim true yoki false qaytaradi. Qidirilayotgan symbol yoki so'z qiymatimizda bo'lsa, true bo'lmasa false qaytaradi
+
+
+charCodeAt()
+console.log("a".charCodeAt()); // natija 97.
+* Qidirilayotgan symbolni ascii code ni chiqarib beradi.
+
+
+
+startsWidth()
+let str = "Webbrain Academy";
+console.log(str.startWidth("w")); // natija false.
+* startWidth() - text biz ko'rsatayotgan harfdan boshlanganmi yoki yo'q shuni tekshiradi
+
+
+endsWidth()
+let str = "Webbrain Academy";
+console.log(str.endsWidth("w")); // natija false.
+* endsWidth() - text biz ko'rsatayotgan harfga tugaganmi yoki yo'q shuni tekshiradi
+
+
+padStart()
+let str = "Webbrain Academy";
+console.log(str.padStart(20, ".")); // natija: ....Webbrain Academy
+* padStart() - ikkita parametr oladi. Birinchisi son. Yani nechtagacha symbol qo'ysin. ikkinchisi qanaqa symbol qo'ysin. Yani qiymatni o'zgartirishda ishlatiladi. Faqat qiymatdan katta son yozishimiz kerak. Bor qiymatni o'chrib boshqa qiymatga o'zlashtirmaydi. Bo'sh joy topsa shunga parametrni beradi.
+
+
+padEnd()
+let str = "Webbrain Academy";
+console.log(str.padEnd(20, ".")); // natija: Webbrain Academy....
+* padEnd() - ikkita parametr oladi. Birinchisi son. Yani nechtagacha symbol qo'ysin. ikkinchisi qanaqa symbol qo'ysin. Yani qiymatni o'zgartirishda ishlatiladi. Faqat qiymatdan katta son yozishimiz kerak. Bor qiymatni o'chrib boshqa qiymatga o'zlashtirmaydi. Bo'sh joy topsa shunga parametrni beradi.
+
+
+
+trimStart()
+let str = "     Webbrain Academy     	";
+console.log(str.trimStart()); // natija: "Webbrain Academy     	"
+* trimStart() - bizga keraksiz boshlanishdagi space larni o'chirib beradi. 
+
+
+
+trimEnd()
+let str = "     Webbrain Academy     	";
+console.log(str.trimEnd()); // natija: "     Webbrain Academy"
+* trimEnd() - bizga keraksiz oxiridan space larni o'chirib beradi. 
+
+
+trim()
+let str = "     Webbrain Academy     	";
+console.log(str.trim()); // natija: "Webbrain Academy"
+* trim() - bizga keraksiz boshidan ham oxiridan space larni o'chirib beradi. 
+
+
+
+slice()
+let str = "webbrain";
+let newStr = str.slice(3, 6); // natija: bra
+let newStr = str.slice(3, -2); // natija: bra
+* slice() - stringlarni qirqib olishga ishlatiladi. Boshlanish va tugash parametrlarini oladi. Manfiy qiymat ham oladi. manfiy qiymatda oxiridan sanab keladi
+
+
+substring()
+let str = "webbrain";
+let newStr = str.substring(3, 6); // natija: bra
+let newStr = str.substring(3, -2); // natija: bra
+* substring() - stringlarni qirqib olishga ishlatiladi. Boshlanish va tugash parametrlarini oladi. Maniy qiymat olmaydi. Bitta parametr bersak ham bo'ladi. Shu parametrgacha kesadi
+
+
+
+substr()
+let str = "webbrain";
+let newStr = str.substr(3, 4); // natija: brai
+* Boshlang'ich va tugash parametrlar oladi. Shuncha qirqib beradi
+
+
+concat()
+let str1 = "Salom";
+let str2 = "Xayr";
+console.log(str1.concat(str2)); // natija: SalomXayr
+* Stringlarni qo'shish uchun ishlatamiz
+
+
+replace()
+let str = "webbrain";
+str.replace("w", "W"); // natija: Webbrain
+* Stringdagi qiymatni parametrdagi qiymatga o'zgartiradi. Stringda ikkita bir xil harf bo'lsa birinchi kelgan qiymatni o'zgartiradi.
+
+
+
+replaceAll()
+let str = "webbrain";
+str.replaceAll("b", "B"); // natija: WeBBrain
+* Stringdagi qiymatni parametrdagi qiymatga o'zgartiradi. Qiymatlar bir xil bo'lsa ham hammasini o'zgartiradi
+
+
+
+for-in
+let str = "webbrain";
+for(let index in str){
+  console.log(index); // natija: 0, 1, 2, 3, 4, 5, 6, 7
+}
+* Bizga stringdagi qiymatlarni indexsini chiqarib beradi
+
+
+for-of
+let str = "webbrain";
+for(let item of str){
+  console.log(item); // natija: w, e, b, b, r, a, i, n
+}
+* Bizga stringdagi qiymatlarni har bir symborini chiqarib beradi
+
+
+
+localCompare()
+let str1 = "webbrain";
+let str2 = "awebbrain";
+console.log(str1.localCompare(str2)); // 1
+* Stringlani taqqoslashda ishlatiladi. Ascii code ga qarab taqqoslaydi. katta kichikligiga qarab 1, yoki -1 chiqaradi. Bir xil bo'lsa 0 chiqdi.
+
+
+
+
+
+
+
+
+
+
+
+

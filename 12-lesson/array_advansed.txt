@@ -1,0 +1,237 @@
+Array advansed
+
+eval()
+console.log(eval("2+3+4+1")); // natija: 10
+* eval() - string ichidagi matematika ammalarini bajaradi. Ishlatish maslahat berilmaydi deyilgan. 
+
+
+filter()
+
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let newArray = array.filter((v, i, a) => {
+  return v % 2 === 0;
+});
+console.log(newArray); // natija: 2, 4, 6, 8, 10
+
+* Qachon qaysidir arrayni nimadandir tozalash, filter qilish kerak bo'lsa ishlatamiz. 
+filter() - parametri arrow function bo'ladi. 
+Functioni parametri value, index, array bo'ladi. 
+Arrayni aylanib chiqadi. 
+Functioni returnga qaytayotgan qiymat bilan qaysidir elemetni qo'shish, qaysidir elementni o'chirish munkin. 
+Birinchi arrayga tasir qilmaydi. Faqat newArray ga o'zlashadi
+* Filter 99% holatda lentgh o'zgaradi. Sortda o'zgarmaydi.
+
+
+sort()
+let array = [3, 4, 2, 6, 1, 10];
+let newArray = array.sort((a, b) => {a - b});
+console.log(newArray); // natija: 1, 2, 3, 4, 6, 10
+* Yuqoridagi funksiyada raqamlarni o'sish tartibida joylashtirib beradi. Yani saralaydi
+
+Birinchi parametrdan ikkinchisini ayrsak o'sish tartibi bo'ladi.
+Ikkinchisidan parametrdan ikkinchisini ayrsak kamayish tartibida saralaydi.
+Birinchi arrayga tasir qiladi.
+
+* sort() - shartga qarab saralash. 
+Parametri arrow function bo'ladi. Functionda ikkita parametr oladi. A va B. 
+
+let array = [
+  "Hayitmurodov Abror",
+  "Mushtari Zabirova",
+  "Azimov Asadbek",
+  "Nazokat Saidikromova"
+];
+
+let newArray = array.sort((a, b) => a.localCompare(b));
+console.log(newArray); // natija quyidagicha↓
+"Azimov Asadbek", "Hayitmurodov Abror", Mushtari Zabirova", "Nazokat Saidikromova"
+* Yani alifbo tartibida saralab berdi.
+* Filter 99% holatda lentgh o'zgaradi. Sortda o'zgarmaydi.
+
+
+find()
+
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let searchedItem = array.find((v) => {
+  return v === 5;
+});
+console.log(searchedItem); // natija: 5
+
+* find() - arrayni ichidan o'zi izlayotgan narsani topguncha ishlaydi. Topsa bo'ldi, to'xtatadi va topilgan qiymatni chiqaradi.
+
+
+
+findIndex()
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let searchedItem = array.findIndex((v) => {
+  return v === 5;
+});
+console.log(searchedItem); // natija: 4
+
+* find() - arrayni ichidan o'zi izlayotgan narsani topguncha ishlaydi. Topsa bo'ldi, to'xtatadi va topilgan indexni chiqaradi.
+
+
+
+findLastIndex()
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let searchedItem = array.findLastIndex((v) => {
+  return v === 5;
+});
+console.log(searchedItem); // natija: 7
+
+* find() - arrayni ichidan o'zi izlayotgan narsani topguncha ishlaydi. Topsa bo'ldi, to'xtatadi va topilgan indexni chiqaradi. Faqat tekshirishni oxiridan qarab keladi 
+
+
+
+forEach()
+
+let sum = 0;
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+array.forEach(v => sum += v);
+console.log(sum); // natija: 55
+
+* forEachga uchun yuqoridagi misolda 1dan 10gacha raqamlarni yig'indisini topish misoli
+* forEach() - looplarga o'xshab aylanib chiqadi. 
+
+
+
+map()
+
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let newArray = array.map(v => v % 2 === 0 ? "juft" : v);
+console.log(newArray); // natija: 1, "juft", 3, "juft", 5, "juft", 7, "juft", 9, "juft"
+
+* Yuqoridagi misolda arrayni ichidagi qiymatni juft soni o'rniga "juft" qo'yib chiqayapti. 
+* map() - Arrayni qaysidir qiymatini o'rniga shartga qarab boshqa elementga o'zgartirish kerak bo'lsa, shunda map() ishlatiladi. Arrayni size o'zgarmaydi. Arrayni qiymati ham o'zgarmaydi. Array sartirofka ham qilmaydi. forEach() ni qilgan ishini map() qila oladi. Lekin map() qilgan ishni forEach() qila olmaydi. Birinchi arrayga tasir qilmaydi. Faqat newArray ga o7zlashtiradi.
+
+ 
+
+every()
+let array = [1, 3, 5, 7, 9];
+let result = array.every(v => v % 2 === 1);
+console.log(result); // natija: true. Chunki hamma qiymat truega teng
+
+let array = [1, 3, 5, 7, 9, 10];
+let result = array.every(v => v % 2 === 1);
+console.log(result); // natija: false. Chunki bitta qiymat falsega teng
+
+* every() - AND && ga o'xshaydi. Arrayni hammasini aylanib chiqadi. Loop qiladi. Berilgan shartga asoslanib hammasini true bo'lsagina true qaytaradi. Bo'lmasa false qaytaradi. 
+
+
+
+some()
+let array = [1, 2, 3, 5, 7, 9];
+let result = array.some(v => v % 2 === 0);
+console.log(result); // natija: true. Chunki bitta qiymat bo'lsa ham truega teng
+
+let array = [1, 3, 5, 7, 9];
+let result = array.some(v => v % 2 === 0);
+console.log(result); // natija: false. Chunki hamma qiymat falsega teng
+
+* some() - OR || ga o'xshaydi. Arrayni hammasini aylanib chiqadi. Loop qiladi. Berilgan shartga asoslanib bitta true bo'lsagina true qaytaradi. Bo'lmasa false qaytaradi. O'zni natijasini topgandagina to'xtaydi. 
+
+
+
+fill(element, start, finish)
+
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let newArray = array.fill("web", 4, 7);
+console.log(newArray); // natija: 1, 2, 3, 4, "web", "web", "web", 8, 9, 10
+
+* Yuqoridagi misolda 5, 6, 7 qiymatlariga "web" yangi qiymatini birlashtirib qo'ydik. Lekin eski arraydagi qiymat ham o'zgaradi
+* fill() - 1-parametri yangi qiymat, 2-parametr nechinchi indexdan boshlab o'zgartirsin, 3-parametr nechinchi indexgacha o'zgartirsin. 
+
+
+
+copyWithin(start, copyStart, copyEnd)
+
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let newArray = array.copyWithin(0, 4, 7);
+console.log(newArray); // natija: 5, 6, 7, 4, 5, 6, 7, 8, 9, 10
+
+* copyWithin() - 1-parametr sanashni qayerdan boshlasin. 2-parametr copyni qayerdan boshlasin. 3-parametr copyni qayerda tugatsin
+Bu mehtod bizga arrayni o'z ichidan copy qilib qayerga qo'yishga imkon beradi.
+
+
+
+flat()
+
+let array = [[1, 2], [3, 4], [5, 6]];
+let newArray = array.flat(1);
+console.log(newArray); natija: 1, 2, 3, 4, 5, 6
+
+* Yuqoridagi misolda ichma ich arraylarni ochib yubordik. Yani bitta arrayga birlashtirdik.
+* Infinity - flat() parametriga infinity yozsak nechta array bo'lsa ham ochib beradi. Yani arrayni sanab o'trishimiz shart emas
+* flat() - bitta parametr qabul qiladi. U parametr vazifasi nechta arrayni ochishni anglatadi
+
+
+
+Array.from(value, callback)
+
+let string = "12345";
+let array = Array.from(string);
+console.log(array); // natija: ['1', '2', '3', '4', '5']
+
+* Yuqoridagi misolda oddiy stringni array qilib berdi
+* Arrayni uchinchi yasash usuli
+
+
+let string = "12345";
+let array = Array.from(string (item) => item * 2);
+console.log(array); // natija: ['2', '4', '6', '8', '10']
+
+* Yuqoridagi misolda oddiy stringni array qilib berdi va 2 ga ko'paytirib berdi
+
+
+
+reduce((c, v) => {}, initial)
+
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let newArray = array.reduce((c, v) => {
+  console.log(c, "current");
+  return ++v;
+}, 0);
+console.log(newArray); 
+// natija quyidagicha
+0 'current'
+2 'current'
+3 'current'
+4 'current'
+5 'current'
+6 'current'
+7 'current'
+8 'current'
+9 'current'
+10 'current'
+11
+
+* reduce() - Arrayni oxirida qandaydir logikaga asoslangan yig'indi, yani bitta qiymat qaytishi kerak. Array emas bo'lgan holatlarda ishlatamiz.
+Returnga har bir aylanganda har hil qiymat qaytarganimizda ishlatamiz. Sonlarni yig'indisini topsak bo'ladi.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
