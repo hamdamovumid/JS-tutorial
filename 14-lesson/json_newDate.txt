@@ -1,0 +1,4 @@
+Destructure - qayta qurish
+Arrayni qayta qurish
+
+let fruits = ["apple", "banana", "kiwi", "grapes"];
