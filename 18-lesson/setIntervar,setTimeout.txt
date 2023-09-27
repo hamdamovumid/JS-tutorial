@@ -1,0 +1,41 @@
+Sinxron - hamma kodlar bir tartibda ishlashi. JS da tepadan pastga o'qib kelganda hammasini tartib bilan bajarishi. 
+Asinxron - shartga qarab qanaqadir jarayoni kutib keyin ishlashi. Misol uchun setInterval, setTimaOut.
+
+
+setTimeout(function, millisecond)
+
+setTimeout(() => {
+  console.log("hello");
+}, 5000);
+
+* Yuqoridagi misolda birinchi function yozib va uni qancha vaqtdan keyin ishlashini belgilab berayapmiz. Yani 5 sikunddan keyin consolega hello chiqadi.
+
+
+
+setInterval(function, millisecond)
+
+setInterval(() => {
+  console.log("hello");
+}, 1000);
+
+* Yuqoridagi misolda harbir sekundda hello chiqadi. Yani hozirgi holatda cheksiz hello chiqadi. 
+
+let time = 0;
+let timer = setInterval(() => {
+  console.log(++time);
+  if(time === 5){
+    cleareInterval(timer);
+}
+}, 1000);
+
+* Yuqoridagi misolda 1 dan 5 gacha sonlar chiqadi. Yani if ga 5gacha son larni chiqarish komandasini yozdik va clearInterval bilan cheksizlikni to'xtatdik. 
+
+
+
+
+
+
+
+
+
+

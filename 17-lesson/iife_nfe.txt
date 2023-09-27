@@ -1,0 +1,37 @@
+IIFE - Immeddiately Invoked Function Expression
+* Joyida function expression ishlatish
+
+(function() {
+  console.log("Hello");
+})(); // natija: Hello
+
+
+(favourite = function(number) {
+  console.log(`My favourite number is ${number}`);
+})(7);
+// natija: 7
+
+
+NFE - Namaed Function Expression
+* Function expressionga nom qo'yishga imkon beradi. 
+
+let getData = function data() {
+  console.log("Hello");
+}
+getData();
+// natija: Hello
+
+
+new Function
+* Function yasashni 4-usuli
+
+const func = new Function(`
+  console.log("hello");
+`);
+func();
+
+
+
+
+
+

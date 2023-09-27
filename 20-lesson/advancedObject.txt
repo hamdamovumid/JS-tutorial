@@ -1,0 +1,102 @@
+Advanced Object
+
+* Biz bu mavzuda object'ni key'ini o'zgartirib, o'chirib bo'lmaydigan qilsak bo'ladi. Yani key'ni qulflab qo'ysak bo'ladi.
+
+Object.getOwnPropertyDescriptor
+
+let user1 = {
+  login: "user1",
+  pass: 123,
+  details: "first course"
+}
+console.log(Object.getOwnPropertyDescriptor(user1, "login"));
+// natija: object qaytaradi. writable true, unumerable true, configurable true deafult holatda bo'ladi.
+
+writable - ustiga yozish, o'zgartirish
+
+unumerable - iteratsiya qilganda shu key chiqish yoki chiqmasligi
+
+configurable - o'chrish
+
+
+Object.defineProperty(object, key, {})
+
+let user1 = {
+  login: "user1",
+  pass: 123,
+  details: "first course"
+}
+Object.defineProperty(user1, pass, {unumerable: false});
+
+* Yuqoridagi misolda user1 iteratsiya qilganimizda passwor ko'rinmaydi. Uni unumerable: false qilib qo'ydik
+
+
+Object.preventExtension(object)
+
+let user1 = {
+  login: "user1",
+  pass: 123,
+  details: "first course"
+}
+
+Object.preventExtension(user1);
+user.name = "Umar";
+
+* Yuqoridagi misolda user1 ga yangi qiymat qo'shib bo'lmaydi. Buni Object.preventExtension bilan bajardik
+
+
+getter
+
+* Getter objectni qiymatlarini olishni bir usuli
+
+let user = {
+  name: "Umid",
+  login: "umid",
+  pass: 123,
+  get showInfo() {
+    console.log(this.login, this.pass);
+}
+};
+user.showInfo
+
+// natija: umid 123
+
+
+setter
+
+* Setter objectni keyi ostidagi qiymatni o'zgatirish uchun ishlatiladi.
+
+let user = {
+  name: "Umid",
+  login: "umid",
+  pass: 123,
+  set changeName(newName) {
+    this.login = newName;
+}
+};
+user.changeName = "UMID";
+
+// natija: UMID
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

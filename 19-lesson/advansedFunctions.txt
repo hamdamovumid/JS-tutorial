@@ -1,0 +1,30 @@
+Advansed functions
+
+bind()
+
+function sayHello {
+  console.log("Hi", this);
+}
+sayHello();
+// natija: Hi windows
+
+
+let tom = {
+  name: "Tom",
+  age: 23
+}
+sayHello.bind(tom)();
+
+* Yuqoridagi misolda sayHello funksiyasini ishlatayapmiz va unga tom objecti birlashtirayapmiz.
+consoleda Hi va tom objecti chiqadi.
+* bind() nig vazifasi functionga object birlashtirish, bog'lash
+
+
+
+
+
+
+
+
+
+

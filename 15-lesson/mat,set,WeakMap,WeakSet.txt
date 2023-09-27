@@ -1,0 +1,248 @@
+Map, Set, WeakMap, WeakSet - bular o'zgaruvchi qabul qiladigan non primiteve data typelar. Type of qilsak object chiqadi. Ko'rinish chixatdan arra va objectga o'xshaydi. Ishlash funksionaligi farq qiladi. 
+
+Map
+* Ko'rinishi jihatdan objectga o'xshaydi. Mapning keyga hohlagan data typeimizni berishimiz munkin. Primitive ham non primitive ham berishimiz munkin. 
+
+let map = new Map([
+  ["name", "Umid"],
+  ["age", "22"]
+]);
+
+Map methods
+
+set(key, value)
+
+* mapga qo'shimcha key ostidagi qiymat biriktiradi. Key sifatida object va array bilan yaratsak bo'ladi. 
+
+let map = new Map([
+  ["name", "Umid"],
+  ["age", "22"],
+  [true, "isHappy"]
+]);
+map.set("status", "student");
+console.log(map); //natija: yuqoridagi map, qo'shimcha statsus keyi va qiymati chiqadi. 
+
+
+let obj = {name: "web"};
+let map = new Map([
+  ["name", "Umid"],
+  ["age", "22"],
+  [true, "isHappy"]
+]);
+map.set(obj, "student");
+
+* Yuqorida misolda o'zgaruvchiga object biriktirib, set orqali qo'shmoqchi bo'lgan objectimizni o'zgaruvchi bilan chaqrayapmiz.
+
+
+get(key)
+
+* mapning ichidagi keyning qiymatini olib beradi. 
+
+let map = new Map([
+  ["name", "Umid"],
+  ["age", "22"],
+  [true, "isHappy"]
+]);
+map.get(true);
+console.log(map); //natija: isHappy
+
+
+detele(key)
+
+* mapni key ostidagi qiymatlarni o'chrishga yordam beradi.
+
+let map = new Map([
+  ["name", "Umid"],
+  ["age", "22"],
+  [true, "isHappy"]
+]);
+map.dalete(true);
+console.log(map); // natija: truedan boshqa hammasi chiqadi. 
+
+clear()
+
+* mapni hamma qiymatlarini o'chradi. 
+
+let map = new Map([
+  ["name", "Umid"],
+  ["age", "22"],
+  [true, "isHappy"]
+]);
+map.clear();
+console.log(map); // natija: hech narsa chiqmaydi. Hamma qiymat o'chib ketti
+
+
+has(key)
+
+* mapning ichidagi key bormi yo'qmi shuni tekshiradi. 
+
+let map = new Map([
+  ["name", "Umid"],
+  ["age", "22"],
+  [true, "isHappy"]
+]);
+map.has(name);
+console.log(map); // natija: true
+
+
+for-of
+
+* Biz maplarni for-of bilan aylanib chiqsak bo'ladi
+
+let map = new Map([
+  ["name", "Umid"],
+  ["age", "22"],
+  [true, "isHappy"]
+]);
+
+for(let key of map){
+  console.log(key);
+}
+
+forEach()
+
+* Biz maplarni forEach bilan aylanib chiqsak bo'ladi
+
+let map = new Map([
+  ["name", "Umid"],
+  ["age", "22"],
+  [true, "isHappy"]
+]);
+
+map.forEach((value, key, map) => console.log(value, key, map));
+
+
+Map variable update
+
+let map = new Map([
+  ["name", "Umid"],
+  ["age", "22"],
+  [true, "isHappy"]
+]);
+map.set(age, 23);
+console.log(map); //natija: mapning age keyidagi qiymati 22dan 23ga o'zgardi.
+
+
+fromEntries()
+
+* fromEntries() - Mapdan object ko'rinishiga o'tkazadi. 
+
+let map = new Map([
+  ["name", "Umid"],
+  ["age", "22"],
+  [true, "isHappy"]
+]);
+console.log(Object.fromEntries(map)); // natija: mapdagi qiymatlar oddiy objectga o'tdi.
+
+
+keys, values, entries
+
+let map = new Map([
+  ["name", "Umid"],
+  ["age", "22"],
+  [true, "isHappy"]
+]);
+console.log(map.values()); // natija: "Umid", "22", "isHappy"
+console.log(map.keys()); // natija: name, age, true
+console.log(map.entries()); // natija: {name => "Umid", age => "22", true => "isHappy"}
+
+
+Set
+
+* Set ko'rinishi jihatdan arrayga o'xshaydi. Array bilan farqi Set da ikkita bir xil qiymat olib bo'lmaydi. Bo'lsa ham ignor qiladi
+
+let set = new Set(["salom", "dunyo"]);
+
+
+add(element)
+
+* add() - setni ichiga qiymat qo'shish uchun ishlatamiz
+
+let set = new Set(["salom", "dunyo"]);
+set.add("hello world");
+console.log(set); //natija: "salom", "dunyo", "hello world" * yani bitta qiymat qo'shdi
+
+
+Setdan Arrayga o'tish
+
+let array = [1, 2, 3, 4, 1, 2, 3];
+let set = new Set(array);
+console.log(Aray.from(set)); // natija: Setdan arrayga o'tdi.
+
+
+has()
+
+* Setda has() ham huddi Mapdagi has() bilan bir xil. 
+let set = new Set([1, 2, 3, 4, 5]);
+cosole.log(set.has(1)); //natija: true. Yani bu qiymat bor
+
+
+Iteration in Set
+
+for-of
+
+* Map bilan bir xil ishlaydi.
+
+let set = new Set([1, null, undefined, "str", 5]);
+for(let item of set){
+  console.log(item);
+};
+
+
+forEach
+
+* Map bilan bir xil ishlaydi.
+
+let set = new Set([1, null, undefined, "str", 5]);
+set.forEach((v, i, s) => {
+  console.log(v, i, s);
+});
+
+
+
+delete()
+
+* Map bilan bir xil ishlaydi.
+
+let set = new Set([1, null, undefined, "str", 5]);
+set.delete(1);
+
+
+clear()
+
+* Map bilan bir xil ishlaydi.
+
+let set = new Set([1, null, undefined, "str", 5]);
+set.clear();
+
+
+
+WeakMap
+
+Methods - set, get, has, delete
+
+* WeakMap - key berganimizda faqat non primitive data typelarni qabul qila oladi. Primitive data typelarni qabul qilmaydi. Map bilan mehtods bir xil. Faqat non primitive key berishimiz kerak.
+
+let weakMap = new WeakMap();
+
+
+WeakSet
+
+Methods - set, get, has, delete
+
+* weakSet - key berganimizda faqat non primitive data typelarni qabul qila oladi. Primitive data typelarni qabul qilmaydi. Set bilan mehtods bir xil. Faqat non primitive key berishimiz kerak.
+
+let weakSet = new WeakSet();
+
+
+
+
+
+
+
+
+
+
+
+
+

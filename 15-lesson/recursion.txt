@@ -1,0 +1,13 @@
+Recurtion
+
+* Recurtion - funksiya ichida yana o'zini chaqrilishi. Syntax chiqatdan function bilan bir xil.
+
+const sum = (n) => {
+  if(n <= 1) return 1;
+  return n + sum(n - 1);
+}
+console.log(sum(5)); //natija: 15
+
+* Yuqoridagi misolda "1"dan "n"gacha bo'lgan sonlarni yig'indisini topish logikasi. 
+
+ 

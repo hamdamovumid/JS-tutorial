@@ -1,0 +1,42 @@
+Scope {}
+
+* Java Scriptda 4 xil scope bor. 
+1. Global scope
+2. Modul scope
+3. Block scope
+4. Function scope
+
+Global scope - js fileni ichida birorta o'zgaruvchiga qiymat biriktirsak bu global bo'la oladi. 
+Boshqa js fileda ham shu o'zgaruvchiga murojat qilsak bo'ladi. Faqat shu js filelarni html file bilan ulash kerak. 
+Qaysi js fileda o'zgaruvchi e'lon qilinadigan bo'lsa, shu js file html fileda birinchi yozilishi kerak. 
+defer degan atribut'ni ulayotgan js fileimizga yozsak shu fileni eng oxiri o'qiydi.  
+
+
+Block scope - {} gulli qavsni ichida yozilgan har qanday logika hisoblanadi. Faqat functiondan tashqari.
+Bunda misol qilib loops, if-else, switch-case larni keltirishimiz munkin. 
+Const va let block scopega ega. Const va let bilan o'zgaruvchi e'lon qilsak faqat scopeini ichida ishlaydi. Tashqarida ishlamzydi. Var ichkarida ham tashqarida ham ishlaydi. 
+
+
+
+Function scope - faqat function ichida ishlaydigan qiymatlar. Function scope tashqarisida ishlata olmaydigan o'zgaruvchilar. 
+Ichkaridan tashqariga murojat qilish munkin. Lekin ichkaridagi o'zgaruvchini tashqarida chaqra olmaymiz. 
+
+
+
+Closure
+
+Closure - quyidagi misolda ko'rishimiz munkin. Console.log bilan ichkarida a bo'lmagani uchun tashqaridagi a ni oladi va qiymati 1 bo'ladi. Manashu closure deyiladi
+
+const a = 1;
+function test() {
+  console.log(a);
+}
+test();
+
+
+
+
+
+
+
+

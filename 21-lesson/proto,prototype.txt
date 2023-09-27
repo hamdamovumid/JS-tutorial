@@ -1,0 +1,40 @@
+Proto
+
+* 2 ta objectni bir biriga bog'lash uchun ishlatiladi. Objectni ildiziga yana bitta object birlashtiradi
+
+__proto__
+
+let part1 = {
+  name: "Umid"
+}
+let part2 = {
+  age: 23
+}
+part1.__proto__ = part2;
+console.log(part1);
+
+* Yuqoridagi misolda part1 bilan part2ni bog'layapti.
+
+
+Prototype
+
+* Prototype bizga yangi method yaratishga yordam beradi
+
+Array.prototype.sayHi = function() {
+  console.log("Salom");
+}
+let array = [1, 3, 5, 7];
+array.sayHi();
+// natija: Salom
+
+* Yuqoridagi misolda yangi method yaratib, o'zimiz hohlagan joyda ishlatib ketsak bo'ladi
+
+
+let array = [1, 2, 3];
+array.prototype.removeEvens = function () {
+  return this.filter((v) => v % 2 !== 0);
+};
+console.log(array);
+console.log(array.prototype);
+
+* Yuqoridagi misolda arraydan juft sonlarni chiqaruvchi method yasayapmiz.
